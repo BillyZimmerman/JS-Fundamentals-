@@ -46,18 +46,45 @@ if (johnsBmi < marksBmi) {
 //  Coding Challenge #3
 // There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
 // Your tasks:
-// 1. Calculatetheaveragescoreforeachteam,usingthetestdatabelow
-// 2. Comparetheteam'saveragescorestodeterminethewinnerofthecompetition,
+// 1. Calculate the average score for each team,using the test data below
+// 2. Compare the team's  averages cores to determine the winner of the competition,
 // and print it to the console. Don't forget that there can be a draw, so test for that
 // as well (draw means they have the same average score)
-// 3. Bonus1:Includearequirementforaminimumscoreof100.Withthisrule,a
+// 3. Bonus1:Include a requirement for a minimum score of 100. With this rule,a
 // team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
-// 4. Bonus2:Minimumscorealsoappliestoadraw!Soadrawonlyhappenswhen both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy
+// 4. Bonus2:Minimum score also applies to a draw!So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy
 // Test data:
 // § Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 // § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
-// GOOD LUCK 😀
-//     The Complete JavaScript Course 7
+
+// const dolphinsScore = ((96 + 108 + 89) / 3);
+// const koalasScore = ((88+ 91+ 110) / 3);
+// console.log(dolphinsScore, koalasScore);
+
+// if (dolphinsScore > koalasScore) {
+//   console.log("dolphins win");
+// } else if (koalasScore > dolphinsScore) {
+//   console.log("koalas win");
+// } else if (dolphinsScore===koalasScore) {
+//   console.log("there is a tie, no one wins")
+// }
+
+// BONUS 1
+const dolphinsScore = ((97 + 112 + 81) / 3);
+const koalasScore = ((109+ 95+ 86) / 3);
+console.log(dolphinsScore, koalasScore);
+
+if (dolphinsScore > koalasScore && dolphinsScore >=100) {
+  console.log("dolphins win");
+} else if (koalasScore > dolphinsScore && koalasScore >=100) {
+  console.log("koalas win");
+} else if (dolphinsScore===koalasScore && dolphinsScore >=100 && koalasScore >=100) {
+  console.log("Both teams win, its a tie")
+} else {
+  console.log("No one wins")
+}
+
+
 // ============================================================================================
 
 //  Coding Challenge #4
@@ -67,9 +94,13 @@ if (johnsBmi < marksBmi) {
 // 2. Print a string to the console containing the bill value,the tip,and the final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 316.25”
 // Test data:
 // § Data 1: Test for bill values 275, 40 and 430 Hints:
-// § To calculate 20% of a value, simply multiply it by 20/100 = 0.2 § Value X is between 50 and 300, if it's>= 50 && <= 300😉
-// GOOD LUCK 😀
-//      The Complete JavaScript Course 8
+// § To calculate 20% of a value, simply multiply it by 20/100 = 0.2 § Value X is between 50 and 300, if it's >= 50 && <= 300😉
+
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * .15 : bill * .2
+
+console.log(`The bill was $${bill}, the tip was $${tip} and the total was $${bill + tip}`);
+
 // ============================================================================================
 
 // JavaScript Fundamentals – Part 2

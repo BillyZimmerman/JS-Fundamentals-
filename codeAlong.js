@@ -64,23 +64,176 @@ console.log(firstName);
 
 // IF/ELSE STATEMENTS 
 
-const age = 13;
-// const isOldEnough = age >= 16;
+// const age = 13;
+// // const isOldEnough = age >= 16;
 
-if(age >= 16) {
-  console.log("Yay you can drive!");
+// if(age >= 16) {
+//   console.log("Yay you can drive!");
+// } else {
+//   const yearsLeft = 16 - age;
+//   console.log(`You are too young. Wait another ${yearsLeft} years :) `)
+// }
+
+// const birthYear = 1987;
+// let century = "";
+
+// if(birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(`you were born in the ${century} century`);
+
+// // TYPE CONVERSION
+// // USING THE NUMBER CONVERSION FUNCTION TO MAKE A STRING A NUMBER
+// const inputYear = '1991';
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
+// // CONVERTING A NUMBER TO A STRING, LESS COMMONLY USED 
+// console.log(String(23));
+
+// // TYPE COERCION - when two values are two different types or if you use a operator to do math with a string involved
+// console.log('I am ' + 23 + ' years old')
+// console.log('23' - '10' - 3);
+// console.log('23' * '4');
+// console.log('23' / '4');
+
+// // TRUTH AND FALSY VALUES 
+// //  5 FALSY VALUES: 0, "", UNDEFINED, NULL, NaN
+// console.log(Boolean(0)); //FALSE
+// console.log(Boolean(undefined)); //FALSE
+// console.log(Boolean('Billy')); //TRUE
+// console.log(Boolean({})); //TRUE
+
+// const money = 0;
+// if(money){
+//   console.log('Do not spend it all');
+// } else {
+//   console.log("get a job you loser!")
+// }
+
+// let height= "";
+// if (height) {
+//   console.log("YAY! Height is defined");
+// } else {
+//   console.log("Height is UNDEFINED");
+// }
+
+// EQUALITY OPERATORS: ==(LOOSE EQUALITY OPERATOR, USES TYPE COERCION) VS. ===(STRICT EQUALITY OPERATOR)
+// WHEN COMPARING VALUES ALWAYS USE THE === OPERATOR
+// const age = '18';
+
+// if(age === 18) console.log("You are an adult (STRICT)");
+ 
+// if(age == 18) console.log("You are an adult (LOOSE)");
+
+// // USING THE NUMBER CONVERTER TO CHANGE WHAT THE USER INPUTS A STRING INTO A NUMBER
+// const favorite = 6;
+// console.log(favorite);
+// console.log(typeof favorite); //number
+
+// if (favorite === 23) {
+//   console.log('Cool 23 is an amazing number');
+// } else if(favorite === 7) {
+//   console.log('7 is an ok number I guess')
+// } else if(favorite === 6) {
+//   console.log('6 freaking rules')
+// } else { 
+//   console.log('Number is not 23 or 7 or 6');
+// }
+
+// // IF NUMBER IS NOT 23 LOG 'WHY NOT 23'
+// if (favorite !== 23) console.log('why not 23?');
+
+// // BOOLEAN OPERATORS 
+// const hasDriversLicense = true;
+// const hasGoodVision = false;
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+
+// // const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// // if(hasDriversLicense && hasGoodVision) {
+// //   console.log('You are old enough to drive');
+// // } else {
+// //   console.log('Someone else should drive')
+// // }
+
+// const isTired = true;
+// console.log(hasDriversLicense || hasGoodVision || isTired);
+
+// if(hasDriversLicense && hasGoodVision && !isTired){
+//   console.log('You are old enough to drive');
+// } else {
+//   console.log('Someone else should drive')
+// }
+
+// SWITCH STATEMENTS 
+const day = 'Tuesday';
+
+switch(day) {
+  case 'Monday':
+    console.log("Plan meals for week");
+    console.log('Go to gym');
+    break;
+  case 'Tuesday':
+    console.log("Eat pizza");
+    break;
+  case 'Wednesday':
+  case "Thursday":
+    console.log("Go to gym");
+    break;
+  case "Friday":
+    console.log("Play games");
+    break;
+  case "Saturday":
+  case "Sunday":
+    console.log("Enjoy the weekend!");
+    break;
+  default:
+    console.log("invalid day")
+}
+// CONVERTING THE CODE ABOVE INTO AN IF/ELSE STATEMENT
+
+const day1 = "Wednesday";
+if (day1 ==="monday") {
+  console.log("Its Monday")
+} else if (day1 ==="Tuesday"){
+  console.log("Its Tuesday")
+} else if (day1 === "Wednesday" || day1 === "Thursday"){
+  console.log("Go to gym")
+} else if (day1 === "Friday") {
+  console.log("Play video games")
+} else if (day1 === "Saturday" || day1 === "Sunday") {
+  console.log("Enjoy the Weekend")
 } else {
-  const yearsLeft = 16 - age;
-  console.log(`You are too young. Wait another ${yearsLeft} years :) `)
+  console.log("choose a valid day")
 }
 
-const birthYear = 1987;
-let century = "";
-
-if(birthYear <= 2000) {
-  century = 20;
-} else {
-  century = 21;
+// STATEMENTS AND EXPRESSIONS
+if (23 > 10) {
+  const str = "23 is bigger"
 }
-console.log(`you were born in the ${century} century`);
+console.log(`I am ${2022 - 1987} years old`)
 
+// CONDITIONAL OPERATORS 
+
+const age = 23;
+
+//add emoji = control + command + space bar
+age >= 18 ? console.log('I like to get drunk 🤪'): 
+console.log("I like to drink water 💧");
+
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+// TERNARY OPERATOR 
+let drink2;
+if(age>=18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
+}
+console.log(drink2);
+console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
