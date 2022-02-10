@@ -83,7 +83,7 @@ console.log(firstName);
 //   century = 21;
 // }
 // console.log(`you were born in the ${century} century`);
-
+// =============================================
 // // TYPE CONVERSION
 // // USING THE NUMBER CONVERSION FUNCTION TO MAKE A STRING A NUMBER
 // const inputYear = '1991';
@@ -119,6 +119,7 @@ console.log(firstName);
 //   console.log("Height is UNDEFINED");
 // }
 
+// ===================================================
 // EQUALITY OPERATORS: ==(LOOSE EQUALITY OPERATOR, USES TYPE COERCION) VS. ===(STRICT EQUALITY OPERATOR)
 // WHEN COMPARING VALUES ALWAYS USE THE === OPERATOR
 // const age = '18';
@@ -145,7 +146,8 @@ console.log(firstName);
 // // IF NUMBER IS NOT 23 LOG 'WHY NOT 23'
 // if (favorite !== 23) console.log('why not 23?');
 
-// // BOOLEAN OPERATORS 
+// ===================================================
+// // BOOLEAN (Logical) OPERATORS 
 // const hasDriversLicense = true;
 // const hasGoodVision = false;
 
@@ -169,6 +171,7 @@ console.log(firstName);
 //   console.log('Someone else should drive')
 // }
 
+// =======================================================
 // SWITCH STATEMENTS 
 const day = 'Tuesday';
 
@@ -210,13 +213,13 @@ if (day1 ==="monday") {
 } else {
   console.log("choose a valid day")
 }
-
+// =====================================================
 // STATEMENTS AND EXPRESSIONS
 if (23 > 10) {
   const str = "23 is bigger"
 }
 console.log(`I am ${2022 - 1987} years old`)
-
+// =====================================================
 // CONDITIONAL OPERATORS 
 
 const age = 23;
@@ -227,7 +230,7 @@ console.log("I like to drink water 💧");
 
 const drink = age >= 18 ? "wine" : "water";
 console.log(drink);
-
+// ===================================================
 // TERNARY OPERATOR 
 let drink2;
 if(age>=18) {
