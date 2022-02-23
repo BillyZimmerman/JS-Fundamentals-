@@ -24,44 +24,58 @@
 // 3. Call 'percentageOfWorld1' for 3 populations of countries of your choice, store the results into variables, and log them to the console
 // 4. Create a function expression which does the exact same thing,called 'percentageOfWorld2', and also call it with 3 country populations (can be the same populations)
 
-function percentageOfWorld1(population) {
-   return (population / 7900) * 100;
-}
-const percentageOfWorld2 = function (population) { 
-  return (population / 7900) * 100;
-};
-const percPortugal1 = percentageOfWorld1(10); 
-const percChina1 = percentageOfWorld1(1441); 
-const percUSA1 = percentageOfWorld1(332); 
+// function percentageOfWorld1(population) {
+//    return (population / 7900) * 100;
+// }
+// const percentageOfWorld2 = function (population) { 
+//   return (population / 7900) * 100;
+// };
+// const percPortugal1 = percentageOfWorld1(10); 
+// const percChina1 = percentageOfWorld1(1441); 
+// const percUSA1 = percentageOfWorld1(332); 
 
-console.log(`Portugal's population percentage of the world is ${percPortugal1}, China's population percentage of the world is ${percChina1}, and Americas population percentage of the world is ${percUSA1}`);
+// console.log(`Portugal's population percentage of the world is ${percPortugal1}, China's population percentage of the world is ${percChina1}, and Americas population percentage of the world is ${percUSA1}`);
 
-// // ==============================================
-// LECTURE: Arrow Functions
-// 1. Recreate the last assignment,but this time create an arrow function called 'percentageOfWorld3'
-const percentageOfWorld3 = population => (population / 7900) * 100;
-const percPortugal3 = percentageOfWorld3(10); 
-const percChina3 = percentageOfWorld3(1441); 
-const percUSA3 = percentageOfWorld3(332); 
-console.log(percPortugal3, percChina3, percUSA3);
+// // // ==============================================
+// // LECTURE: Arrow Functions
+// // 1. Recreate the last assignment,but this time create an arrow function called 'percentageOfWorld3'
+// const percentageOfWorld3 = population => (population / 7900) * 100;
+// const percPortugal3 = percentageOfWorld3(10); 
+// const percChina3 = percentageOfWorld3(1441); 
+// const percUSA3 = percentageOfWorld3(332); 
+// console.log(percPortugal3, percChina3, percUSA3);
 //======================================================================
 // LECTURE: Functions Calling Other Functions
 // 1. Create a function called 'describePopulation'. Use the function type you like the most. This function takes in two arguments: 'country' and 'population', and returns a string like this: 'China has 1441 million people, which is about 18.2% of the world.'
 // 2. To calculate the percentage,'describePopulation' call the 'percentageOfWorld1' you created earlier
 // 3. Call'describePopulation'with data for 3 countries of your choice
 
-const describePopulation = function (country, population) { const percentage = percentageOfWorld1(population);
-  const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`; console.log(description);
-  };
-  describePopulation('Portugal', 10);
-  describePopulation('China', 1441);
-  describePopulation('USA', 332);
+// const describePopulation = function (country, population) { const percentage = percentageOfWorld1(population);
+//   const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`; console.log(description);
+//   };
+//   describePopulation('Portugal', 10);
+//   describePopulation('China', 1441);
+//   describePopulation('USA', 332);
 //=======================================================================
 // LECTURE: Introduction to Arrays
 // 1. Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations'
 // 2. Log to the console whether the array has 4 elements or not(true or false)
-// 3.  Create an array called'percentages'containing the percentages of the
-// world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values
+// 3.  Create an array called'percentages'containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values
+
+ const populations = [10, 1441, 332, 83]; 
+ console.log(populations.length === 4); 
+
+ function percentageOfWorld1(populations) {
+  return (populations / 7900) * 100;
+}
+
+ const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3])
+];
+console.log(percentages);
 //=====================================================================
 // LECTURE: Basic Array Operations (Methods)
 // 1. Create an array containing all the neighboring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbors. Store the array into a variable called 'neighbors'
