@@ -45,9 +45,8 @@
 // console.log(scoreDolphins, scoreKoalas);
 // checkWinner(scoreDolphins, scoreKoalas);
 
-// ============================================================================================
+//  Coding Challenge #2 =====================================================================================
 
-//  Coding Challenge #2
 // Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 // Your tasks:
 // 1. Write a function'calcTip'that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100
@@ -55,30 +54,57 @@
 // 3. Create an array'tips' containing the tip value for each bill,calculated from the function you created before
 // 4. Bonus:Create an array'total' containing the total values,so the bill+tip Test data: 125, 555 and 44
 // Hint: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
-  const calcTip = function(bill) {
-    return bill >= 50 && bill <= 300 ? bill *.15 :
-    bill * .2
-  }
-  const bills = [125, 555, 44];
-  const tips = [calcTip(bills[0]),calcTip(bills[1]), calcTip(bills[2])];
-  const totals = [bills[0] + tips[0],bills[1] + tips[1],bills[2] + tips[2]];
+  // const calcTip = function(bill) {
+  //   return bill >= 50 && bill <= 300 ? bill *.15 :
+  //   bill * .2
+  // }
+  // const bills = [125, 555, 44];
+  // const tips = [calcTip(bills[0]),calcTip(bills[1]), calcTip(bills[2])];
+  // const totals = [bills[0] + tips[0],bills[1] + tips[1],bills[2] + tips[2]];
 
-  console.log(bills, tips, totals);
+  // console.log(bills, tips, totals);
 
 // ============================================================================================
 
 //  Coding Challenge #3
 // Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
 // Your tasks:
-// 1. Foreachofthem,createanobjectwithpropertiesfortheirfullname,mass,and height (Mark Miller and John Smith)
+// 1. For each of them,create an object with properties for their full name,mass,and height (Mark Miller and John Smith)
 // 2. Create a 'calcBMI' method on each object to calculate the BMI(the same method on both objects). Store the BMI value to a property, and also return it from the method
 // 3. Log to the console who has the higher BMI,together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
 // Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-// GOOD LUCK 😀
-//    The Complete JavaScript Course 11
-// ============================================================================================
 
-//  Coding Challenge #4
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2
+    return this.bmi;
+  }
+};
+
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2
+    return this.bmi;
+  }
+};
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi, john.bmi);
+
+if(mark.bmi > john.bmi) {
+  console.log(`${mark.fullName}'s BMI ${mark.bmi} is higher than ${john.fullName}'s ${john.bmi}!`)
+} else {
+  console.log(`${john.fullName}'s BMI ${john.bmi} is higher than ${mark.fullName}'s ${mark.bmi}!`)
+};
+
+// Coding Challenge #4 =====================================================================================
+
 // Let's improve Steven's tip calculator even more, this time using loops!
 // Your tasks:
 // 1. Create an array 'bills' containing all 10 test bill values
@@ -91,6 +117,5 @@
 // 4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together
 // 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
 // 4.3. Call the function with the 'totals' array
-// GOOD LUCK 😀
-//     The Complete JavaScript Course 12
-// ============================================================================================
+
+//=====================================================================================

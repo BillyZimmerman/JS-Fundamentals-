@@ -132,26 +132,104 @@
    //  const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
    //  console.log(ages);
 
-const friends = ['Tim', 'Russell', 'Blake'];
-   // Using the push method to add an element to the end of an array
-   const newLength = friends.push('Mark');
-   console.log(friends);
-   console.log(newLength);
-   // using unshift to add a name to the beginning of the array
-   friends.unshift('John');
-   console.log(friends);
-   //using the pop method to remove the last element 
-   friends.pop();
-   console.log(friends);
-   // using the shift method to remove the first element 
-   friends.shift();
-   console.log(friends);
-   //using indexOf method to call for the element you gives the index of the element you call
-   console.log(friends.indexOf("Tim"));
-   //Using includes method to see if either name is in the array which will return a boolean value
-   console.log(friends.includes("Blake"))
-   console.log(friends.includes("roy"))
+// const friends = ['Tim', 'Russell', 'Blake'];
+//    // Using the push method to add an element to the  end of an array
+//    const newLength = friends.push('Mark');
+//    console.log(friends);
+//    console.log(newLength);
+//    // using unshift to add a name to the beginning of the array
+//    friends.unshift('John');
+//    console.log(friends);
+//    //using the pop method to remove the last element 
+//    friends.pop();
+//    console.log(friends);
+//    // using the shift method to remove the first element 
+//    friends.shift();
+//    console.log(friends);
+//    //using indexOf method to call for the element you gives the index of the element you call
+//    console.log(friends.indexOf("Tim"));
+//    //Using includes method to see if either name is in the array which will return a boolean value
+//    console.log(friends.includes("Blake"))
+//    console.log(friends.includes("roy"))
 
-   if (friends.includes('Tim')) {
-      console.log("you have a friend named Tim")
+//    if (friends.includes('Tim')) {
+//       console.log("you have a friend named Tim")
+//    }
+
+// Intro to Objects
+// =====================================================
+
+// const billy = {
+//    firstName: 'Billy',
+//    lastName: 'Zimmerman',
+//    age: 2022 - 1987,
+//    job: 'Student',
+//    friends: ['Jackson', 'Patrick', 'Bradford']
+// };
+
+// Dot vs Bracket Notation
+//=======================================================
+// const billy = {
+//    firstName: 'Billy',
+//    lastName: 'Zimmerman',
+//    age: 2022 - 1987,
+//    job: 'Student',
+//    friends: ['Jackson', 'Patrick', 'Bradford']
+// };
+// console.log(billy);
+
+// // Using the dot notation that returns only the last name for the Billy object 
+// console.log(billy.lastName);
+// // // Using the bracket notation that returns only the last name for the Billy object 
+// console.log(billy['lastName']);
+
+// const nameKey = 'Name';
+// console.log(billy["first" + nameKey]);
+// console.log(billy["last" + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about Billy? Choose between firstName, lastNme, age, job and friends');
+
+// if(billy[interestedIn]) {
+//    console.log(billy[interestedIn]);
+// } else {
+//    console.log('Wrong request! Choose between firstName, lastNme, age, job and friends')
+// }
+// billy.loaction = 'Oregon';
+// billy['twitter'] = '@twittersucks';
+// console.log(billy);
+
+// console.log(`${billy.firstName} has ${billy.friends.length} friends, his best friend is called ${billy.friends[0]}. `)
+
+// OBJECT METHODS
+// ==================================================
+
+const kelsey = {
+   firstName: 'Kelsey',
+   lastName: 'Zimmerman',
+   birthYear: 1990,
+   job: 'nurse',
+   friends: ['Billy', 'Vanessa', 'Luis'],
+   hasDriversLicense: true,
+
+   // calcAge: function(birthYear) {
+   //    return 2022 - birthYear
+   // },
+
+   // calcAge: function() {
+   //    console.log(this);
+   //    return 2022 - this.birthYear
+   // },
+
+   calcAge: function() {
+      this.age = 2022 - this.birthYear;
+      return this.age;
+   },
+
+   getSummary: function() {
+      return `${this.firstName} is a ${this.calcAge()} year old ${kelsey.job}, and she has ${this.hasDriversLicense ? 'a': 'no'} driver's license.`
    }
+};
+console.log(kelsey.job);
+console.log(kelsey.age);  //undefined
+console.log(kelsey.calcAge());
+console.log(kelsey.getSummary());
